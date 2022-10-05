@@ -15,5 +15,12 @@
     <p>Elles servent entre autre à stocker des informations (comme en JS)</p>
     <p>Elles peuvent être manipulées, affichées, sauvegardées, détruites etc...</p>
     <p>ATTENTION qu'en PHP à la fin d'une page PAR DEFAUT tout est détruit (ramasse-miettes). D'où l'importance de stocker des données.</p>
+    <h4>Mettez les variables valides (même déconseillées) dans les balises PHP</h4>
+    <pre>
+        $lulu = 5;
+        $lala = "yes";
+        $5main = 3;
+        
+    </pre>
 </body>
 </html>
