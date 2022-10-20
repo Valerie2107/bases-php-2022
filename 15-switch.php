@@ -60,13 +60,33 @@ switch($a){
 }
 ?>
 
+<p>Equivalence des && avec switch</p>
+<?php
+$temp= mt_rand(-5,5);
 
+switch($temp){
+    case -5:
+    case -4:   
+    case -3:
+    case -2:
+    case -1:
+    case 0:
+        echo "Il gèle à {$temp}°";
+        break;
+    default:
+        echo "L'eau est liquide à {$temp}°";
+}
+echo "<hr>";
+if($temp<=0):
+    echo "Il gèle à {$temp}°";
+else:
+    echo "L'eau est liquide à {$temp}°";
+endif;
 
-
-
+?>
 <p><a href="https://www.php.net/manual/fr/control-structures.match.php">match php.net</a></p>
 
-
+<p>Le switch sera très important pour le contrôleur frontal.</p>
 
 
 
