@@ -12,14 +12,20 @@
     Il y a erreur grave et arrêt du script en cas d'échec.</p>
 
     <?php
-    //appel du footer
-    require_once "18-footer-1.php";     
-    
-    require_once "18-footer-1.php2";   //je fais volontairement une faute. 
-    
-    require_once "18-footer-1.php";   //malgré l'erreur, le code ne s'arrête pas. On ne recharge PAS le footer car c'est le même qu'avant. Cela aurait été un autre footer, il l'aurait chargé<div class=""></div>
+    // appel le footer
+    require_once "18-footer-1.php"; 
+    require_once "18-config.php";
+    echo $lulu; // coucou
 
-    echo "je suis quand même exécuté";
+    $lulu = 25;
+    echo "<br>$lulu";
+    require_once "18-config.php";
+    echo "<br>$lulu";
+    // erreur
+    require_once "18-footer-2.php"; 
+    // malgré l'erreur, le code ne s'arrête pas, on ne recharge PAS le footer
+    //require_once "18-footer-1.php"; 
+    echo "<h3>Je suis pas exécuté</h3>";
     ?>
 <!--<p>require et require_once sont assez dangereux car les erreurs sont visibles par les users et du cou p ils peuvent voir les noms des variables qui créent des failles de sécurité.</p>-->
 
