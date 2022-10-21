@@ -24,3 +24,8 @@ echo "<br>".DB_HOST;
 var_dump(TABLEAU);
 
 echo "<br>".TABLEAU[0];
+?>
+
+<h4>const NOM_CONSTANTE = {valeur}</h4>
+<p>fonctionne de la même manière. vient de l'orienté objet (OO)<br>
+On peut aussi bien utiliser const que define</p>
