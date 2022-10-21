@@ -15,7 +15,7 @@
     <?php
     include "18-footer-1.php";     //pas obligatoire de mettre les parenthèses car include est tellement usité qu'il est devenu un mot réservé pour fonction. Il va donc chercher le footer de l'autre fichier.
     
-    include "18-footer-1.php2";   //je fais volontairement une faute. Malgré celle-ci, le code va fonctionner pour la fonction précédente et le code ne s'arrête pas après l'erreur - PHP va également charger la fonction suivante.  
+    include "18-footer-1.php2";   //je fais volontairement une faute. Malgré celle-ci, le code va fonctionner pour la fonction précédente et le code ne s'arrête pas après l'erreur - PHP va également charger la fonction suivante.
     
     include "18-footer-1.php"; 
     ?>
