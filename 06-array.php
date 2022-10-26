@@ -87,5 +87,8 @@ $tabAssoc = [
 ];
 var_dump($tabAssoc);
 ?>
+
+
+<!--- en JS, il n'y a que des tableaux indexé-->
 </body>
 </html>

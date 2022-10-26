@@ -22,7 +22,7 @@
     require "18-config.php";
     echo "<br>$lulu";
     // erreur
-    require "18-footer-2.php";  //malgré l'erreur, le code ne s'arrête pas. On ne recharge PAS le footer car c'est le même qu'avant. Cela aurait été un autre footer, il l'aurait chargé
+    require "18-footer-2.php";  //vaec l'erreur, le code s'arrête. On ne recharge PAS le footer car c'est le même qu'avant. Cela aurait été un autre footer, il l'aurait chargé
 
      //require_once "18-footer-1.php"; 
      echo "<h3>Je suis pas exécuté</h3>";
@@ -32,7 +32,10 @@
 include pour du design<br>
 require pour des variables dangereuses et donc généralement dans un fichier de config
 </p>
+<!--- différence entre include et require: si j'ai une erreur avec include, il affichera quand même le reste de la page. require si j'ai une erreur, il affichera juste une erreur car il considere que 'est une erreur grave'
+ - include quand je veux mettre de morceaux de codes dans un fichier surtout s'ils peuvent être chargés/affichés plusieurs fois sur la page (genre un menu)<br>
 
+        - require once quand c'est un fichier important qu'on ne peut pas toucher surtout s'il y a des constantes.<br>-->
 
 </body>
 </html>

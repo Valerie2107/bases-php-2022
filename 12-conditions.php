@@ -54,5 +54,10 @@ if($temp <= -10){
     echo "Il fait agréable dehors.";
 }
 ?>
+
+<!--- un if dont on est sûr à 100% qu'il va être true ou false (genre si je définie une constante je vais pas la ligne suivante vérifier si ma constante existe), ben on le fait pas vu qu'il sert à rien. Je ne vais le faire que si ce que ce que si ce que je vérifie est supposé être défini mais par quelqu'un d'autre sur une autre page et/ou qu'il peut être modifié sans quon s'en rende compte
+
+éventuellement on peut faire un if inversé si je désire vraiment mettre un else.<br>-->
+
 </body>
 </html>

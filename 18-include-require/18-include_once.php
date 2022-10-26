@@ -9,7 +9,7 @@
 <body>
     <h1>include_once</h1>
     <p>fonction qui va permettre d'importer n'importe quoi (en général un autre fichier PHP) </p>
-
+    - include once va effectuer ma demande 1x. Si je demande de le faire une seconde fois, il ne le fera pas. Il n'affichera rien<br>
     <?php
     include_once "18-footer-1.php";     //même code que pour le include.
     

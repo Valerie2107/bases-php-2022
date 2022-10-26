@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>
+        - en JS, il n'y a que des tableaux indexé<br>
+
+        - en JS, le switch, le break et int et cases sont STRICTS contrairement à PHP, donc risque d'avoir des résultats inattendus si on réfléchit comme en PHP<br>
+
+        - POST et GET sont des supers globales<br>
+        elles existent par défaut. De quels types sont-elles ? array, et généralement ce sont des arrays associatifs<br>
+
+        - en PHP un array n'est pas du tout du même type qu'en JS  --> il est procédural. Le chamin pour atteindre est différent (même si on fini par arriver plus ou moins au même résultat)<br>
+
+        - si je ne met  pas de break à un switch, mon code risque d'être plus et vérifier des choses inutilement. Même si j'ai déjà trouver ma réponse, il va continuer à vérifier tout le reste.<br>
+        
+        - un if dont on est sûr à 100% qu'il va être true ou false, ben on le fait pas vu qu'il sert à rien.<br>
+        éventuellement on peut faire un if inversé si je désire vraiment mettre un else.<br>
+
+        - on déclare une constante avec CONST.<br>
+        on écrit cette constante toujours en MAJUSCULE<br>
+        on peut aussi utiliser DEFINE<br>
+        on va écrire toujours ainsi: DEFINE("NOM_EN_MAJUSCULE")<br>
+
+        - on est obligé de directement donner une valeur à une constante.<br>
+        plus tard dans le code, je ne pourrai pas modifier cette valeur (d'où le nom de constante)
+        
+        - en PHP, on n'a pas besoin du $ pour le nom de la constante<br>
+
+        - en PHP quand je mets une constante entre "", avec echo il m'affiche LULU car il ne repère pas que c'ets une constante et m'affiche un string. <br>
+        si je veux la valeur qui est entre "", CONST_LULU = 2   alors je dois concaténer avec des . devant et derrière CONST_LULU = ".2."<br>
+
+        - un include peut tout charger comme fichier, en règle générale ce sera un fichier PHP. Il sait lire le reste mais si jamais je mets du PHP dans un fichier HTML, il y a le risquequ'un hacker voit ma code. d'où faille de sécurité<br>
+        si je veux mettre une image, mieux vaut la mettre dans un fichier PHP qui va la lire. Elle sera affichée à l'écran en bonne résolution mais se trouvera en réalité <br>
+
+        - include once va effectuer ma demande 1x. Si je demande de le faire une seconde fois, il ne le fera pas. Il n'affichera rien<br>
+
+        - différence entre include et require: si j'ai une erreur avec include, il affichera quand même le reste de la page. require si j'ai une erreur, il affichera juste une erreur car il considere que 'est une erreur grave'
+
+        - include quand je veux mettre de morceaux de codes dans un fichier surtout s'ils peuvent être chargés/affichés plusieurs fois sur la page (genre un menu)<br>
+
+        - require once quand c'est un fichier important qu'on ne peut pas toucher surtout s'il y a des constantes.<br>
+
+        - pourquoiq on appele ça un controleur frontal? pourquoi on le crée? c'est un seul fichier par lequel tout passe. Du coup c'est une securité pour éviter qu'il n'affiche mon code source.<br>
+
+        - je recupère le GET en PHP avec $_GET - majuscule importante car sinon PHP ne comprend pas. C'est une super globale et c'est une convention d'écriture définie et fixée<br>
+
+        - 
+
+
+
+    </p>
+</body>
+</html>
+
+

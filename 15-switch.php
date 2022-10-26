@@ -70,4 +70,5 @@ endif
 
 ?>
 
+<!--<p> - en JS, le switch, le break et int et cases sont STRICTS contrairement à PHP, donc risque d'avoir des résultats inattendus si on réfléchit comme en PHP<br></p>-->
 

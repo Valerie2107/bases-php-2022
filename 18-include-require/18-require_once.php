@@ -23,11 +23,11 @@
     echo "<br>$lulu";
     // erreur
     require_once "18-footer-2.php"; 
-    // malgré l'erreur, le code ne s'arrête pas, on ne recharge PAS le footer
+    // avec l'erreur, le code s'arrête pas, on ne recharge PAS le footer
     //require_once "18-footer-1.php"; 
     echo "<h3>Je suis pas exécuté</h3>";
     ?>
-<!--<p>require et require_once sont assez dangereux car les erreurs sont visibles par les users et du cou p ils peuvent voir les noms des variables qui créent des failles de sécurité.</p>-->
+<!--<p>require et require_once sont assez dangereux car les erreurs sont visibles par les users et du coup ils peuvent voir les noms des variables qui créent des failles de sécurité.</p>-->
 
 </body>
 </html>
