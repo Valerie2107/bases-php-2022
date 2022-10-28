@@ -8,7 +8,7 @@
 </head>
 <body>
     <h1>require_once</h1>
-    <p>require_once() est une fonction qui va permettre d'importer n'importe quoi (en général un autre fichier PHP), 1 seule fois, l'intéret étant d'éviter des chargements multiples non-nécessaires !! Erreur grave et arr^^et du script en cas d'échec</p>
+    <p>require_once() est une fonction qui va permettre d'importer n'importe quoi (en général un autre fichier PHP), 1 seule fois, l'intérêt étant d'éviter des chargements multiples non-nécessaires !! Erreur grave et arrêt du script en cas d'échec</p>
     <?php
     // appel le footer
     require_once "18-footer-1.php"; 
