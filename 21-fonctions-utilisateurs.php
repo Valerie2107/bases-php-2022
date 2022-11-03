@@ -41,16 +41,65 @@
 
                     <?php
                      function calculBasic($num1, $num2, $op = "+"){
-
+                        switch ($op){
+                            case "*": //multiplication
+                                return $num1*$num2;  //le return arrête la fonction et renvoie le résultat  --> rare que l'on mette un return dans un switch
+                                break;     // ici le break est facultatif: certes il arrête la fonction, mais le return le faisait déjà à la ligne précédente --> on est dans un cas particulier
+                            case "-":
+                                return $num1-$num2;
+                                break;
+                            case "/": 
+                                return $num1/$num2;
+                                break;
+                            default: 
+                                return $num1+$num2;
+                            }
                     }
 
+                    echo calculBasic(7,5);
+                    echo "<br>";
 
-                    ?>
+                    echo calculBasic(25,83, "-");
+                    echo "<br>";
+
+                    echo calculBasic(7,5, "*");
+                    echo "<br>";
+
+                    echo calculBasic(7,5,"/");
+                    echo "<br>";
+
+                    echo calculBasic(7,5, "connerie");
+                    echo "<br>";
+        ?>
+
+                    <p>autre manière en utilisant un if</p>
+        <?php
+        //très souvent quand on inverse (avec !) un &&, il devient un ||  -  et vice-versa
+                     function calculBasicBis($num1, $num2, $op = "+"){
+                        if (!is_numeric($num1) || !is_numeric($num2)){
+                            return "attention, les 2 premiers paramètres doivent être numériques";
+                        }
+                        switch ($op){
+                            case "*": //multiplication
+                                return $num1*$num2;  //le return arrête la fonction et renvoie le résultat
+                                break;     // ici le break est facultatif
+                            case "-":
+                                return $num1-$num2;
+                                break;
+                            case "/": 
+                                return $num1/$num2;
+                                break;
+                            default: 
+                                return $num1+$num2;
+                            }
+                    }
+
+                    echo calculBasicBis(7,5);
+                    echo "<br>";
 
 
 
-
-        
+        ?>
 
             
 </body>
