@@ -1,5 +1,20 @@
 <?php
+//import du fichier contenant nos fonctions
 include "22-functions.php";
+
+//débogage de ma fonction
+var_dump($_POST);
+
+//si on a envoyé le formulaire
+if(isset($_POST['int1'], $_POST['int2'], $_POST['operation']))
+
+
+$resultat ="utiliser notre calculette";
+
+
+
+
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -19,84 +34,24 @@ include "22-functions.php";
     <hr>
     <br>
 
-<?php
-
-/* 
-function calculBasic($num1, $num2, $op = "+"){
-    
-    if(!is_numeric($num1)||!is_numeric($num2)){
-        return "Attention, les 2 premiers paramètres doivent être numériques";
-    }
-    switch ($op){
-        case "*":
-            return $num1*$num2; // le return arrête la fonction et renvoie le résultat
-            break; // break facultatif dans ce cas particulier
-        case "-":
-            return $num1-$num2;
-            break;
-        case "/":
-            // si division par 0 affichage de l'erreur et arrêt du script
-            if($num2==0) return "Division par 0 interdite";
-            return $num1/$num2;
-            break;
-        default:
-            return $num1+$num2;
-    }
-}
-*/
-    if(isset($_POST['first'],$_POST['op'],$_POST['second'],)){
-
-// $reponse ="formulaire envoyé";
-
-$num1=($_POST['first']); 
-$op=($_POST['op']); 
-$snum2 =($_POST['second']); 
-
-if(is_numeric($num1) && is_numeric($snum2)){
-if($op == 'division' AND $snum2 == 0){
-    echo "on divise pas par 0 " ; 
-}else  if($op !=null){
-
-         switch($op){
-           case"addition": $reponse =$num1 + $snum2 ; 
-           break;
-           case "soustraction" : $reponse= $num1 - $snum2 ; 
-           break ; 
-           case "multilication": $reponse = $num1 * $snum2 ; 
-           break ; 
-           case "division": $reponse =$num1 / $snum2 ; 
-           break ;  
-        }
-     echo ("résultat : {$reponse}") ; 
-
-    }    
-
-
-
-
-    
-
-}else {
-echo ("Invalide , veiller réeseyer  ") ; 
-}
-
-
-}
-?>
-
-
-<form action="" name="calcul" method="POST">
-    <input type="text" name="first" />
-    <select name="op">
-        <option value="addition">+</option>
-        <option value="soustraction">-</option>
-        <option value="multiplication">*</option>
-        <option value="division">/</option>
+<form action="" method="POST">
+    <input type="text" name="int1" />
+    <select name="op"> <!--"op" de opération-->
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">*</option>
+        <option value="/">/</option>
     </select>
-    <input type="text" name="second" />
-    <input type="submit" value="Calculer"/>
+    <input type="text" name="int2" />
+    <input type="submit" value="="/>
 </form>
 
+<?php 
+if(isset ($resultat)){
+    echo $resultat;
+}
+
+?>
 
     
 </body>
