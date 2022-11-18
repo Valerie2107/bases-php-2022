@@ -20,7 +20,6 @@ function creeDesTensionsDansLeGroupe(){
     // retour d'une valeur, ici le datetime (https://www.php.net/manual/fr/datetime.format.php) par un return
     return date("Y-m-d H:i:s");
     // tout ce qui est après l'appel d'un return ne sera pas exécuté
-    echo "coucou";
 }
 
 echo creeDesTensionsDansLeGroupe();
@@ -41,15 +40,15 @@ function calculBasic($num1, $num2, $op = "+"){
     switch ($op){
         case "*":
             return $num1*$num2; // le return arrête la fonction et renvoie le résultat
-            break; // break facultatif dans ce cas particulier
+            // break facultatif dans ce cas particulier
         case "-":
             return $num1-$num2;
-            break;
+            
         case "/":
             // si division par 0 affichage de l'erreur et arrêt du script
             if($num2==0) return "Division par 0 interdite";
             return $num1/$num2;
-            break;
+           
         default:
             return $num1+$num2;
     }

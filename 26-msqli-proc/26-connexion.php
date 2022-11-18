@@ -17,8 +17,21 @@
 
                     // rien n'est complet, j'ai lâché le cours
 
-
+            
                 ?>
+
+    <code><pre>
+
+    </pre></code>
+
+                <h4>Déconnexion</h4>
+                <p>Optionnel - mais conseillé par les bonnes pratiques.<br>
+                en mysql ou maria DB, les connexions se ferment automatiquement en fin de script - gain de vitesse et économie sur la puissance du serveur.<br>
+                Si trop de connexions ont lieu en même temps, on aura un time-out et le user potentiel ne pourra pas se connecter.</p>
+                <p>En cas de connexions permanentes, il ne faut pas l'utiliser!<br>
+                Les connexions permanentes  sont utilisées sur les gros serveurs ayant les capacités de supporter énormément de connexions en même temps.</p>
+
+                <!-- rien n'est complet, j'ai lâché le cours   -->
 
 </body>
 </html>
