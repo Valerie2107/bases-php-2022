@@ -1,0 +1,3 @@
+<p>on sait que c'est un fichier qui va manquer et que le suivant devra recréer.
+    le .gitignore a été créé pour éviter que le vrai fichier config.php (avec nos identifiants etc) ne soit envoyé sur git et accessible sans notre accord
+</p>
