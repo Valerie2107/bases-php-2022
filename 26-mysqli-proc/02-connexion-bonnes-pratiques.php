@@ -15,6 +15,7 @@ require_once "config.php";
     <h2>Méthode procédurale</h2>
     <h3>mysqli_connect avec un try catch</h3>
     <p>Voir la page sur <a href="https://www.php.net/manual/fr/mysqli.construct.php" target="_blank">php.net</a></p>
+    
     <code><pre>
 // Essai de connexion    
 try {
@@ -53,6 +54,14 @@ try {
     ?>
     <h4>Déconnexion</h4>
     <p>Optionnel mais doit être mis pour les bonnes pratiques.<br>En effet en mysql ou mariaDB les connexions se ferment automatiquement en fin de script. ! En cas de connexion permanente, il ne faut pas l'utiliser!<br>Les connexions permanentes sont utilisées sur les gros serveurs ayant les capacités de les supporter (gain de vitesse)</p>
+
+    <!-- mon texte dans le p
+    <p>Optionnel - mais conseillé par les bonnes pratiques.<br>
+                en mysql ou maria DB, les connexions se ferment automatiquement en fin de script - gain de vitesse et économie sur la puissance du serveur.<br>
+                Si trop de connexions ont lieu en même temps, on aura un time-out et le user potentiel ne pourra pas se connecter.</p>
+                <p>En cas de connexions permanentes, il ne faut pas l'utiliser!<br>
+                Les connexions permanentes  sont utilisées sur les gros serveurs ayant les capacités de supporter énormément de connexions en même temps.</p>  -->
+
     <h3>mysqli_close</h3>
     <code><pre>
 mysqli_close($mysqliConnect);

@@ -27,3 +27,7 @@ On crée un .gitignore pour ne pas envoyer notre fichier config.php sur github p
 config.php.create en est une copie sans les vrais paramètres de connexion !
 
 
+
+<p>on sait que c'est un fichier qui va manquer et que le suivant devra recréer.
+    le .gitignore a été créé pour éviter que le vrai fichier config.php (avec nos identifiants etc) ne soit envoyé sur git et accessible sans notre accord
+</p>
