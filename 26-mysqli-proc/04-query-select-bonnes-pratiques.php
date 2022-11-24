@@ -29,4 +29,7 @@ if (empty($nb)){
     $affiche = "Pas encore de pays répertorié"
 }
 
+//J'AI LACHE LE COURS
+
+
 ?>
