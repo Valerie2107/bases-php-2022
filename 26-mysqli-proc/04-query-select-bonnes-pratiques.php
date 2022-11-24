@@ -1,42 +1,32 @@
 <?php
 require_once "config.php";
 
-// connexion
 
-try{
+// connexion ancienne version
+
     // création d'une variable contenant la connexion
-    $DB= mysqli_connect(DB_HOST, DB_LOGIN, DB_PWD, DB_NAME, DB_PORT);
-    
-    //mettre le charset à la connexion
+    $db = @mysqli_connect(DB_HOST,DB_LOGIN,DB_PWD,DB_NAME,DB_PORT);
+
+    // si erreur
+    if(mysqli_connect_errno()){
+        //sortie et affichage du code de l'erreur et son message
+        die("Erreur numéro : ".mysqli_connect_errno()." Message : ".mysqli_connect_error());
+    }
+    // mettre le charset à la connexion
     mysqli_set_charset($db, DB_CHARSET);
 
-}catch(Exception $e){
+// sélectionne tout depuis la table stat ordonné par nom ascendant
+$sql = "SELECT * FROM statistiques ORDER BY nom ASC";
 
-    //  utilisation des fonctions d'erreurs procédurales en mysqli
-    echo "erreur numéro: ".mysqli_connect_errno()." Message: ".mysqli_connect_error().PHP_EOL;  // --> mauvaise pratique, mieux vaut utiliser le try catch avec exit (ou die)
+// requête sans try catch
+$query = mysqli_query($db,$sql) or die("Erreur numéro : ".mysqli_errno($db)." Message : ".mysqli_error($db));
 
-    //affiche l'erreur et arrête le script
-    exit(utf8_encode($e->getMessage()));
+//on compte le nombre de résultats
+$nb = mysqli_num_rows($query)
+
+//si on n'a pas de résultat, on va vérifier si c'est vide
+if (empty($nb)){
+    $affiche = "Pas encore de pays répertorié"
 }
 
-
-//je crée une variable sur base de ma table sql
-$sql = "SELECT * from statistiques Order by nom asc";
-
-// requête
-$query = mysqli_query($db, $sql) or die("Erreur numéro: ".mysqli_errno($db)."Message: ").mysqli_error($db);
-
 ?>
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
-</html>
